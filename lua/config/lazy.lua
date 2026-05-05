@@ -23,7 +23,7 @@ vim.g.maplocalleader = "\\"
 
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("v", "<leader>y", '"+y')
-vim.keymap.set("n", "<leader>Y", '"+yG')
+vim.keymap.set("n", "<leader>y", '"+y')
 vim.keymap.set("n", "<Esc>", ":nohl<cr>")
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
@@ -46,15 +46,3 @@ require("lazy").setup({
 	checker = { enabled = true },
 })
 
-vim.api.nvim_create_autocmd("TextYankPost", {
-	desc = "Highlight when yanking (copying) text",
-	group = vim.api.nvim_create_augroup("highlight-yank", { clear = true }),
-	callback = function()
-		vim.highlight.on_yank({ higroup = 'IncSearch', timeout = 200 })
-	end,
-})
-
-vim.api.nvim_create_autocmd('FileType', {
-	pattern = { 'javascript', 'javascriptreact', 'java' },
-	callback = function() vim.treesitter.start() end,
-})
