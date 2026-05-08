@@ -28,3 +28,5 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		vim.keymap.set('n', 'grd', vim.lsp.buf.definition, { desc = "Go to definition" })
 	end
 })
+
+vim.cmd.colorscheme("gruber-darker")
