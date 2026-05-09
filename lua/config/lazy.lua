@@ -24,14 +24,20 @@ vim.g.maplocalleader = "\\"
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("v", "<leader>y", '"+y')
 vim.keymap.set("n", "<leader>y", '"+y')
-vim.keymap.set("n", "<Esc>", ":nohl<cr>")
 vim.keymap.set("i", "<C-c>", "<Esc>")
+vim.keymap.set("n", "<C-c>", ":nohl<cr>")
+
+vim.keymap.set("n", '<M->>', '<C-w>>')
+vim.keymap.set("n", '<M-<>', '<C-w><')
+vim.keymap.set("n", '<M-->', '<C-w>-')
+vim.keymap.set("n", '<M-+>', '<C-w>+')
 
 vim.o.number = true
 vim.o.relativenumber = true
 
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
+vim.o.nohlsearch = false
 
 vim.o.undofile = true
 
