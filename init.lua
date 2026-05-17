@@ -29,6 +29,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
 	end
 })
 
-vim.cmd.colorscheme("gruber-darker")
+vim.cmd.colorscheme("vague")
 
 
