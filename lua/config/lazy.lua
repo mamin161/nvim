@@ -39,6 +39,7 @@ vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 
 vim.o.undofile = true
+vim.o.winborder = "rounded"
 
 -- Setup lazy.nvim
 require("lazy").setup({

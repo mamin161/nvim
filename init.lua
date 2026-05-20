@@ -9,7 +9,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 vim.api.nvim_create_autocmd('FileType', {
-	pattern = { 'javascript', 'javascriptreact', 'java' },
+	pattern = { 'javascript', 'javascriptreact', 'java', 'lua', 'go' },
 	callback = function() vim.treesitter.start() end,
 })
 
